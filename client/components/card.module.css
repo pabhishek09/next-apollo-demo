@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  padding: 0.25em 0.5em;
+  flex-direction: column;
+  border: 0.25em solid black;
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+.avatar {
+
+}
+
+.avatar img {
+  width: 128px;
+  aspect-ratio: 1;
+}

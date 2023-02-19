@@ -1,0 +1,30 @@
+.title {
+  text-align: center;
+}
+.persons {
+  padding: 2rem 4rem;
+}
+
+.personsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0.25em;
+  row-gap: 0.25em;
+}
+
+.btnContainer {
+  padding: 0.25rem 0.5em;
+  text-align: center;
+}
+
+@media screen  and (min-device-width: 320px) and (max-device-width: 576px) {
+  .personsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-device-width: 577px) and (max-device-width: 768px) {
+  .personsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

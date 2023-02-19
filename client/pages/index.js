@@ -1,14 +1,10 @@
 import Link from 'next/link'
-import WithApollo from '../lib/with-apollo'
-import Name from '../components/Name'
 
 const Page = () => (
   <div>
-    Welcome, <Name />
     <br/><br/>
-    <Link href="/about"><a>About</a></Link>
-
+    <Link href="/persons">Persons</Link>
   </div>
 )
 
-export default WithApollo(Page)
+export default Page
