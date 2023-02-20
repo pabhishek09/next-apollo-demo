@@ -7,20 +7,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5000:5000"
-    healthcheck:
-        # test: ["CMD", "curl", "http://localhost:5000", "-H", "Content-Type: application/json", "-X", "POST", "-d", '{"query": "query { persons { name } }"}']
-        test: ["CMD", "curl", "https://google.com"]
-        interval: 30s
-        timeout: 5s
-        retries: 3
 
   client: 
     build:
         context: client
         dockerfile: Dockerfile
     depends_on:
-      # graphql:
-      #   condition: service_healthy
       - graphql
     ports:
       - "3000:3000"
